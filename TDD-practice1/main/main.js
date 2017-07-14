@@ -6,24 +6,29 @@ function fizzBuzzWhizz(number) {
         return 'Fizz';
     }else if (number.indexOf('3')===-1){
         number = parseInt(number);
-        if (number%3!==0 && number%5!==0 && number%7!==0){
+        if (number%3===0){
+            if(number%5===0){
+                return 'FizzBuzz';
+            }else if(number%7===0){
+                return 'FizzWhizz';
+            }else{
+                return 'Fizz';
+            }
+        }else if (number%5===0){
+            if(number%7===0){
+                return 'BuzzWhizz';
+            }else{
+                return 'Buzz';
+            }
+
+        }else if (number%7===0){
+            return 'Whizz'
+        }else{
             return number;
-        }else if (number%3===0 && number%5!==0 && number%7!==0){
-            return 'Fizz';
-        }else if (number%3!==0 && number%5===0 && number%7!==0){
-            return 'Buzz';
-        }else if (number%3!==0 && number%5!==0 && number%7===0) {
-            return 'Whizz';
-        }else if (number%3===0 && number%5===0 && number%7!==0) {
-            return 'FizzBuzz';
-        }else if (number%3===0 && number%5!==0 && number%7===0) {
-            return 'FizzWhizz';
-        }else if (number%3!==0 && number%5===0 && number%7===0) {
-            return 'BuzzWhizz';
         }
     }
 }
 
-// console.log(fizzBuzzWhizz(84))
+// console.log(fizzBuzzWhizz(35))
 
 //--------finished main & main-test in around 40min------
