@@ -1,61 +1,91 @@
 'use strict';
-
-describe('fizzBuzzWhizz', ()=> {
-    it('If the number contains number 3, return ‘Fizz’ in hundred.',()=>{
-      //Given the number contains 3
-    var num = 13;
-    var actualResult = fizzBuzzWhizz (num);
-    var expectedResult = 'Fizz';
+//1234567890
+describe('xAxB', ()=> {
+    it('case 0A0B',()=>{
+      //Give the case 0A0B
+    var num = 5678;
+    var actualResult = guessNumber (num);
+    var expectedResult = '0A0B';
     expect(actualResult).toEqual(expectedResult);
      })
 
-    it ('If a number is not times of 3, 5, or 7,return the numbers.',()=>{
-    var num = 1 ;
-    var actualResult = fizzBuzzWhizz (num);
-    var expectedResult = num;
+    it ('case 0A1B',()=>{
+    var num = 5671 ;
+    var actualResult = guessNumber (num);
+    var expectedResult = '0A1B';
     expect(actualResult).toEqual(expectedResult);
     })
-
-    it ('If a number is times of 3 ,but not times of 5 or 7,return ‘Fizz’',()=>{
-    var num = 3 ;
-    var actualResult = fizzBuzzWhizz (num)
-    var expectedResult = 'Fizz';
-    expect(actualResult).toEqual(expectedResult);
+    it ('case 0A2B',()=>{
+        var num = 5612 ;
+        var actualResult = guessNumber (num);
+        var expectedResult = '0A2B';
+        expect(actualResult).toEqual(expectedResult);
     })
-
-    it ('If a number is only times of 5 ,return ‘Buzz’',()=>{
-    var num = 5 ;
-    var actualResult = fizzBuzzWhizz (num)
-    var expectedResult = 'Buzz';
-    expect(actualResult).toEqual(expectedResult);
+    it ('case 0A3B',()=>{
+        var num = 5123 ;
+        var actualResult = guessNumber (num);
+        var expectedResult = '0A3B';
+        expect(actualResult).toEqual(expectedResult);
     })
-
-    it ('If a number is only times of 7 ,return ‘Whizz’',()=>{
-    var num = 7 ;
-    var actualResult = fizzBuzzWhizz (num)
-    var expectedResult = 'Whizz';
-    expect(actualResult).toEqual(expectedResult);
+    it ('case 0A4B',()=>{
+        var num = 4123 ;
+        var actualResult = guessNumber (num);
+        var expectedResult = '0A4B';
+        expect(actualResult).toEqual(expectedResult);
     })
-
-    it ('If a number is times of 3 and 5 ,return ‘FizzBuzz’',()=>{
-    var num = 15 ;
-    var actualResult = fizzBuzzWhizz (num)
-    var expectedResult = 'FizzBuzz';
-    expect(actualResult).toEqual(expectedResult);
+    it ('case 1A0B',()=>{
+        var num = 1567 ;
+        var actualResult = guessNumber (num);
+        var expectedResult = '1A0B';
+        expect(actualResult).toEqual(expectedResult);
     })
-
-    it ('If a number is times of 3 and 7 ,return ‘FizzWhizz’',()=>{
-    var num = 21 ;
-    var actualResult = fizzBuzzWhizz (num)
-    var expectedResult = 'FizzWhizz';
-    expect(actualResult).toEqual(expectedResult);
+    it ('case 1A1B',()=>{
+        var num = 1467 ;
+        var actualResult = guessNumber (num);
+        var expectedResult = '1A1B';
+        expect(actualResult).toEqual(expectedResult);
     })
-
-    it ('If a number is times of 5 and 7 ,return ‘BuzzWhizz’',()=>{
-    var num = 70 ;
-    var actualResult = fizzBuzzWhizz (num)
-    var expectedResult = 'BuzzWhizz';
-    expect(actualResult).toEqual(expectedResult);
+    it ('case 1A2B',()=>{
+        var num = 1426 ;
+        var actualResult = guessNumber (num);
+        var expectedResult = '1A2B';
+        expect(actualResult).toEqual(expectedResult);
+    })
+    it ('case 1A3B',()=>{
+        var num = 1423 ;
+        var actualResult = guessNumber (num);
+        var expectedResult = '1A3B';
+        expect(actualResult).toEqual(expectedResult);
+    })
+    it ('case 2A0B',()=>{
+        var num = 1256 ;
+        var actualResult = guessNumber (num);
+        var expectedResult = '2A0B';
+        expect(actualResult).toEqual(expectedResult);
+    })
+    it ('case 2A1B',()=>{
+        var num = 1246 ;
+        var actualResult = guessNumber (num);
+        var expectedResult = '2A1B';
+        expect(actualResult).toEqual(expectedResult);
+    })
+    it ('case 2A2B',()=>{
+        var num = 1243 ;
+        var actualResult = guessNumber (num);
+        var expectedResult = '2A2B';
+        expect(actualResult).toEqual(expectedResult);
+    })
+    it ('case 3A0B',()=>{
+        var num = 1236 ;
+        var actualResult = guessNumber (num);
+        var expectedResult = '3A0B';
+        expect(actualResult).toEqual(expectedResult);
+    })
+    it ('case 4A0B',()=>{
+        var num = 1234 ;
+        var actualResult = guessNumber (num);
+        var expectedResult = '4A0B';
+        expect(actualResult).toEqual(expectedResult);
     })
 })
 
