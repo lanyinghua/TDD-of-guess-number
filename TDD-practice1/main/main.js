@@ -1,37 +1,59 @@
-'use strict';
+
 //1234567890
-function toarr(num) {
-    var numstr=String(num);
-    var fir=parseInt(numstr.slice(0,1));
-    var sec=parseInt(numstr.slice(1,2));
-    var thir=parseInt(numstr.slice(2,3));
-    var forth=parseInt(numstr.slice(3));
-    var numarr=[fir,sec,thir,forth];
+function getRandomNum(min,max) {
+    var range =max-min;
+    var numarr=[];
+    while (numarr.length<4){
+        var randomNumber = Math.floor(Math.random()*range);
+        if (numarr.indexOf(randomNumber)<0){
+          numarr.push(randomNumber.toString());
+        }
+    }
     return numarr;
 }
+// console.log(getRandomNum(0,9));
+// let readlineSync = require('readline-sync');
+// let input = readlineSync.question('Please input 4 numbers !');
+// console.log(input);
 
-function guessNumber(num) {
-    var numarr = toarr(num)
-    var howmanyA=0;
-    var howmanyB=0;
-    // if (1===numarr[0]){
-    //     howmanyA+=1
-    // }else if (1===numarr[1]){
-    //     howmanyB+=1
-    // }else if (1===numarr[2]){
-    //     howmanyB+=1
-    // }
-    for (var i=1;i<=4;i++){
+
+var readline = require('readline-sync');
+function getUserNum() {
+    var usernumarr=readline.question('Writedown four numbers.(e.g.1234)');
+    usernumarr=usernumarr.toString().split('');
+    return usernumarr;
+}
+// console.log(getUserInput())
+
+function guessNumber() {
+    var numarr = getRandomNum(0,9);
+    var usernumarr = getUserNum();
+    var countA=0;
+    var countB=0;
+    for (var i=0;i<4;i++){
         for (var j=0;j<4;j++){
-            if (i===numarr[i-1]){
-                howmanyA+=1;
+            if (numarr[i]===usernumarr[i]){
+                countA+=1;
                 break;
-            }else if (i===numarr[j]){
-                howmanyB+=1;
+            }else if (numarr[i]===usernumarr[j]){
+                countB+=1;
             }
         }
     }
-    var result = howmanyA+'A'+howmanyB+'B'
+    var result = countA+'A'+countB+'B'
     return result;
 }
-console.log(guessNumber(1256))
+console.log(guessNumber())
+
+
+const obj_getRandomNum = {
+    method: getRandomNum
+}
+const obj_getUserNum = {
+    method : getUserNum
+}
+module.exports.obj_getRandomNum = obj_getRandomNum;
+module.exports.obj_getUserNum = obj_getUserNum;
+module.exports.guessNumber = guessNumber;
+
+
